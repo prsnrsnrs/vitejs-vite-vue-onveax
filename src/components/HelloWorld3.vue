@@ -26,7 +26,8 @@ export default {
   methods: {
     doAction() {
       this.message = 'こんにちは、' + this.input + 'さん！';
-      this.$emit('result-event', this.input)
+      // 3-21 あたり、$emit サンプル
+      this.$emit('result-event', this.input);
     },
   },
 };
