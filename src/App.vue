@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <HelloWorld3 v-bind:title="message" />
+    <p>comp start</p>
+    <HelloWorld3 v-bind:title="title" v-on:result-event="appAction" />
+    <p>comp end</p>
     <hr />
     <button class="btn btn-primary" v-on:click="doAction">change title</button>
+
+    <p>ev result: {{ result }}</p>
   </div>
 </template>
 
@@ -16,13 +20,19 @@ export default {
   },
   data() {
     return {
-      message: 'HELLO',
+      // message: 'HELLO',
+      title: 'HELLO',
+      result: 'no event yet',
     };
   },
   methods: {
     doAction() {
       var input = prompt('new title:');
-      this.message = input;
+      // this.message = input;
+      this.title = input;
+    },
+    appAction(message) {
+      this.result = '(*** you send:"' + message + '". ***)';
     },
   },
 };
