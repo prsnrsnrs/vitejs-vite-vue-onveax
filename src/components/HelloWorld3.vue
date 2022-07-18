@@ -15,7 +15,7 @@ export default {
   name: 'HelloWorld',
   props: {
     title: String,
-    message: String,
+    // message: String,
   },
   data() {
     return {
