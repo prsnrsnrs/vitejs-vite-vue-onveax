@@ -8,6 +8,7 @@
 </template>
 
 <script>
+// リスト4-12 ---------------
 export default {
   name: 'HelloWorld',
   props: {
